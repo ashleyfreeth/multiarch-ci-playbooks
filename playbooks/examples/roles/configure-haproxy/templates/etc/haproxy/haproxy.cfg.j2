@@ -50,12 +50,14 @@ frontend ocp4-router-http
    mode tcp
    option tcplog
    bind apps.{{ cluster_domain_name }}:80
+   bind apps-int.{{ cluster_domain_name }}:80
    default_backend ocp4-router-http
 
 frontend ocp4-router-https
    mode tcp
    option tcplog
    bind apps.{{ cluster_domain_name }}:443
+   bind apps-int.{{ cluster_domain_name }}:443
    default_backend ocp4-router-https
 
 backend ocp4-kubernetes-api-server
