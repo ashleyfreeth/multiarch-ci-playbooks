@@ -12,6 +12,7 @@ bastion               IN A {{ bastion_public_ip_address }}
 api                   IN A {{ bastion_public_ip_address }}
 api-int               IN A {{ bastion_private_ip_address }}
 apps                  IN A {{ bastion_public_ip_address }}
+apps-int              IN A {{ bastion_private_ip_address }}
 *.apps                IN A {{ bastion_public_ip_address }}
 
 {% for item in bootstrap.keys() %}
